@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Page Title</title>
+    
+    <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+
+    <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="../css/app.css" rel="stylesheet">        
+</head>
+
+
+<body>
+    
+    <header class="row">
+	<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4 header-logo">
+	    <img src="logo.png">
+	</div>    
+	    
+        <nav class="col-lg-10 col-md-10 col-sm-9 col-xs-8">
+            <div class="btn-group navigation-bar">
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-list"></span>Archive</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-warning-sign"></span> My Alerts</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign"></span>About</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span>Account</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+	<div class="row">
+	    <div class="col-lg-12 col-md-12 container-header-copy">		    
+		<div>CapitolHound is a searchable audio index for the North Carolina general assembly.</div>
+	    </div>
+	</div>
+	    
+	<section class="account">
+	    <div class="row">
+		<div class="col-lg-12">
+		    <h1 class="account-name">John Smith</h1>
+		</div>
+	    </div>
+	    
+	    <div class="row">
+		<div class="col-lg-4">
+		    <h3>Account Info</h3>
+		    <div class="acount-info-name">John Smith</div>
+		    <div class="account-info-edit">
+			<a href="#">Edit Name</a>
+			<a href="#">Edit Email</a>
+		    </div>
+		</div>
+		<div class="col-lg-4">
+		    <h3>Current Annual Payment</h3>
+		    <div class="acount-info-payment">$850</div>
+		    <div class="account-info-payment-due">Next payment due: 12/31/2014</div>
+		    <div class="account-info-payment-edit">
+			<a href="#">Add/Change Payment Information</a>
+		    </div>
+		</div>
+	    </div>
+	</section>
+	    
+	
+	<section class="alerts">
+    
+	    <div class="row">
+		<h2>Subscribed Alerts</h2>
+		<table class=".table col-lg-12 col-md-12 col-sm-12">
+		    <thead>
+			<tr>
+			    <th>Keyword</th>
+			    <th>Frequency</th>
+			    <th>Method</th>
+			    <th>Bookmarks</th>
+			</tr>
+		    </thead>
+		    <tbody>
+			<tr>
+			    <td>Education</td>
+			    <td>Weekly</td>
+			    <td>SMS</td>
+			    <td>4</td>
+			    <td><a href="#">Edit</a><a href="#">Delete</a></td>
+			</tr>
+		    </tbody>
+		    <tfoot>
+			<tr>
+			    <td><span class="alerts-table-add-new"><span class="glyphicon glyphicon-plus"></span>Add New</span></td>
+			    <td>
+				<form id="alerts-table-frequency">
+				    <select class="form-control">
+					<option value="daily">Daily</option>
+					<option value="weekly">Weekly</option>
+					<option value="monthly">Monthly</option>
+				    </select>
+				</form>
+			    </td>
+			    <td>
+				<form id="alerts-table-method">
+				    <select class="form-control">
+					<option value="sms">SMS</option>
+					<option value="email">email</option>
+					<option value="twitter">Twitter</option>
+				    </select>
+				</form>
+			    </td>
+			</tr>
+		    </tfoot>
+		</table>
+	    </div>
+	</section>
+    </section>
+
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

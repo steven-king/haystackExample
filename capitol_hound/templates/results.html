@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Page Title</title>
+    
+    <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+
+    <link href="../bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="../app.css" rel="stylesheet">        
+</head>
+
+
+<body>
+    
+    <header class="row">
+	<div class="col-lg-2 col-md-2 header-logo">
+	    <img src="logo.png">
+	</div>    
+	    
+        <nav class="col-lg-10 col-md-10">
+            <div class="btn-group navigation-bar">
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-list"></span>Archive</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-warning-sign"></span> My Alerts</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign"></span>About</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span>Account</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+	<div class="row">
+	    <div class="col-lg-12 col-md-12 container-header-copy">		    
+		<div>CapitolHound is a searchable audio index for the North Carolina general assembly.</div>
+	    </div>
+	</div>
+	    
+	<div class="row">
+	    <div class="col-lg-6 col-lg-offset-3 search-bar">
+		<div class="input-group">
+		    <input type="text" class="form-control">
+		    <span class="input-group-btn">
+			<button class="btn btn-default" type="button">Search</button>
+			<div class="clickme">Advanced Options</div>
+			
+			<script>
+			    $('.clickme').on('click', function(){
+				$('#advanced-options-container').css('display', 'inherit');
+			    });
+			    
+			    $('.clickme').off('click', function(){
+				$('#advanced-options-container').css('display', 'block');			    
+			    });
+			</script>
+			
+			<section id="advanced-options-container">
+			    <form>
+				<input type="radio" name="section" value="house"><label for="house">House</label><br>
+				<input type="radio" name="section" value="senate"><label for="senate">Senate</label><br>
+				
+				<label for="from">From:</label>
+				<select name="from">
+				    <option value="jan">January</option>
+				    <option value="feb">February</option>
+				    <option value="mar">March</option>
+				    <option value="apr">April</option>
+				</select>
+				
+				<label for="to">To:</label>
+				<select name="to">
+				    <option value="jan">January</option>
+				    <option value="feb">February</option>
+				    <option value="mar">March</option>
+				    <option value="apr">April</option>
+				</select>
+				
+				<input type="submit" value="Submit">
+			    </form>                       
+			</section>
+		    </span>
+		</div>
+	    </div>
+        </div>
+	
+	<section class="results">
+	    <div class="row">
+		<div class="col-lg-8 col-lg-offset-2 results-header">
+		    <h2>28 results for "<span>healthcare</span>"</h2>
+		    <form>
+			Sort:
+			<select>
+			    <option value="newest">Newest to Oldest</option>
+			    <option value="oldest">Oldest to Newest</option>
+			    <option value="relevant">Most Relevant</option>
+			</select>
+		    </form>
+		</div>
+	    </div>
+	    <ul class="row">
+		<li class="col-lg-12">
+		    <h2>
+			<span class="glyphicon glyphicon-expand"></span>
+			<span>Senate</span> |
+			<span>Regular Session</span> |
+			<span>July 2, 2013</span>
+		    </h2>
+		    <p>
+			“Zril nullam usu healthcare, eirmod offendit mei no, cum cu prima eleifend scripserit. Congue integre
+duo ea. Constituto scripserit mel in. Ut prima fabulas disputando sit, summo accusamus principes
+mei et. Ea eum mollis eligendi apeiria scripserit mel in no mutat saperet...”
+		    <a href="#">More</a>
+		    </p>
+		</li>
+		
+		<li class="col-lg-12">
+		    <h2>
+			<span class="glyphicon glyphicon-expand"></span>
+			<span>House</span> |
+			<span>Regular Session</span> |
+			<span>July 1, 2013</span>
+		    </h2>
+		    <p>
+			“Zril nullam usu healthcare, eirmod offendit mei no, cum cu prima eleifend scripserit. Congue integre
+duo ea. Constituto scripserit mel in. Ut prima fabulas disputando sit, summo accusamus principes
+mei et. Ea eum mollis eligendi apeiria scripserit mel in no mutat saperet...”
+		    <a href="#">More</a>
+		    </p>
+		</li>
+	    </ul>
+	</section>
+        
+    </section>
+
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

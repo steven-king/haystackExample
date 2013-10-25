@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Page Title</title>
+    
+    <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+
+    <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="../css/app.css" rel="stylesheet">        
+</head>
+
+
+<body>
+    
+    <header class="row">
+	<div class="col-lg-2 col-md-2 header-logo">
+	    <img src="../images/logo.png">
+	</div>    
+	    
+        <nav class="col-lg-10 col-md-10">
+            <div class="btn-group navigation-bar">
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-list"></span>Archive</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-warning-sign"></span> My Alerts</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign"></span>About</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span>Account</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+	<div class="row">
+	    <div class="col-lg-12 col-md-12 container-header-copy">		    
+		<div>CapitolHound is a searchable audio index for the North Carolina general assembly.</div>
+	    </div>
+	</div>
+	    
+	<div class="row">
+	    <div class="col-lg-6 col-lg-offset-3 search-bar">
+		<div class="input-group">
+		    <input type="text" class="form-control">
+		    <span class="input-group-btn">
+			<button class="btn btn-default" type="button">Search</button>
+			<div class="clickme">Advanced Options</div>
+			
+			<script>
+			    $('.clickme').on('click', function(){
+				$('#advanced-options-container').css('display', 'inherit');
+			    });
+			    
+			    $('.clickme').off('click', function(){
+				$('#advanced-options-container').css('display', 'block');			    
+			    });
+			</script>
+			
+			<section id="advanced-options-container">
+			    <form>
+				<input type="radio" name="section" value="house"><label for="house">House</label><br>
+				<input type="radio" name="section" value="senate"><label for="senate">Senate</label><br>
+				
+				<label for="from">From:</label>
+				<select name="from">
+				    <option value="jan">January</option>
+				    <option value="feb">February</option>
+				    <option value="mar">March</option>
+				    <option value="apr">April</option>
+				</select>
+				
+				<label for="to">To:</label>
+				<select name="to">
+				    <option value="jan">January</option>
+				    <option value="feb">February</option>
+				    <option value="mar">March</option>
+				    <option value="apr">April</option>
+				</select>
+				
+				<input type="submit" value="Submit">
+			    </form>                       
+			</section>
+		    </span>
+		</div>
+	    </div>
+        </div>
+	
+	<div class="row">
+	    <div class="col-lg-4 col-md-4 index-item">
+		<h1>Trending Topics <span>Past 7 Days</span></h1>
+		<ul>
+		    <li>Education <span class="glyphicon glyphicon-arrow-up"></span> <span class="trending-topics-trend">52%</span></li>
+		    <li>University Funding <span class="glyphicon glyphicon-arrow-up"></span> <span class="trending-topics-trend">37%</span></li>
+		    <li>Healthcare <span class="glyphicon glyphicon-arrow-up"></span> <span class="trending-topics-trend">28%</span></li>
+		    <li>Immigration <span class="glyphicon glyphicon-arrow-up"></span> <span class="trending-topics-trend">14%</span></li>                
+		</ul>
+	    </div>
+	    
+	    <div class="col-lg-4 col-md-4 index-item">
+		<h1>Latest Audio</h1>
+		<ul>
+		    <li>Senate | Regular Session</li>
+		    <li>House | Regular Session</li>
+		</ul>
+	    </div>
+    
+	    <div class="col-lg-4 col-md-4 index-item">
+		<h1>Popular Searches</h1>
+		<ol>
+		    <li>Healthcare</li>
+		    <li>Education</li>
+		    <li>Public schools</li>
+		</ol>
+	    </div>
+	</div>
+        
+    </section>
+
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

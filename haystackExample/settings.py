@@ -18,11 +18,11 @@ MANAGERS = ADMINS
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'ds0155m59756q',
-    'HOST': 'ec2-54-235-86-117.compute-1.amazonaws.com',
+    'NAME': 'd41ecu6n7mdtes',
+    'HOST': 'ec2-54-225-106-227.compute-1.amazonaws.com',
     'PORT': 5432,
-    'USER': 'qnphtfnjklfuwv',
-    'PASSWORD': 'qALH9Kzizjc1gGiRl_StnR8_R5'
+    'USER': 'xaidpjsdwkebit',
+    'PASSWORD': 'W4XpI16tUqtKrUbOI0H0ppJPl7'
   }
 }
 
@@ -201,7 +201,9 @@ else:
     
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#DATABASES['default'] =  dj_database_url.config()
+
+DATABASES['default'] = dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -218,3 +220,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+
+
+
+
