@@ -1,0 +1,21 @@
+--- 
+applications: 
+  .: 
+    framework: 
+      info: 
+        exec: 
+        mem: 64M
+        description: Standalone Application
+      name: standalone
+    command: update
+    services: 
+      capitolhound-mysql-73356: 
+        type: mysql
+      postgressch: 
+        type: postgresql
+    instances: 1
+    runtime: python2
+    infra: aws
+    mem: "128"
+    url: capitolhound
+    name: haystackExample/
